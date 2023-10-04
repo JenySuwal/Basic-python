@@ -1,0 +1,16 @@
+{% extends 'clientbase.html' %}
+
+{% block content %}
+<button><a href="/news/update/{{newsdetail.id}}/">Update</a></button><br>
+<a href="/news/delete/{{newsdetail.id}}/">delete</a><br>
+
+
+<h1>{{newsdetail.title}}</h1>
+<br>
+{{newsdetail.content|safe}}
+<br>
+
+<img src="{{newsdetail.image.url}}" width="50px" height="50px" alt="no image found"><br>
+Category:{{newsdetail.Category}}
+View count = {{newsdetail.viewed}}
+{% endblock %}

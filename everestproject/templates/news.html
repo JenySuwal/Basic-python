@@ -1,0 +1,11 @@
+{% extends 'clientbase.html' %}
+{% block title %}News{% endblock %}
+{% block content %}
+{% block news %} active {% endblock%}
+<h1>all news</h1>
+<ul>
+    {% for n in news %}
+     <li><a href="/news/{{n.id}}/">View Detail </a>{{n.title}}</li>
+     {% endfor %}
+</ul>
+{% endblock %}

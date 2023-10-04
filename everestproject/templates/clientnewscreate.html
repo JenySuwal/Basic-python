@@ -1,0 +1,10 @@
+    {% extends 'clientbase.html' %}
+    {% block title %}about {% endblock %}
+    {% block create%} active{% endblock%}
+    {% block content%}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+       {{form.as_p}}
+       <button>Submit</button>
+      </form>
+      {% endblock %}
